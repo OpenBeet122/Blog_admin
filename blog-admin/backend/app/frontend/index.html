@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Админ-панель блога</title>
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<h1>Админ-панель коллективного блога</h1>
+
+<!-- Блок со статьями -->
+<section>
+    <h2>Статьи</h2>
+    <div class="filters">
+        <!-- Фильтр по статусу статьи -->
+        <label>
+            Статус:
+            <select id="articleStatusFilter">
+                <option value="">Все</option>
+                <option value="Черновик">Черновик</option>
+                <option value="На модерации">На модерации</option>
+                <option value="Опубликовано">Опубликовано</option>
+            </select>
+        </label>
+
+        <!-- Фильтр по ID автора -->
+        <label>
+            Автор (ID):
+            <input type="number" id="articleAuthorIdFilter" placeholder="ID автора" />
+        </label>
+
+        <!-- Кнопка загрузки статей -->
+        <button id="loadArticlesBtn">Загрузить статьи</button>
+    </div>
+
+    <!-- Таблица статей -->
+    <table id="articlesTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Заголовок</th>
+            <th>Статус</th>
+            <th>ID автора</th>
+            <th>ID категории</th>
+            <th>Создано</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</section>
+
+<!-- Блок с комментариями -->
+<section>
+    <h2>Комментарии</h2>
+    <div class="filters">
+        <!-- Фильтр по ID статьи -->
+        <label>
+            ID статьи:
+            <input type="number" id="commentArticleIdFilter" placeholder="ID статьи" />
+        </label>
+        <button id="loadCommentsBtn">Загрузить комментарии</button>
+    </div>
+
+    <!-- Таблица комментариев -->
+    <table id="commentsTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>ID статьи</th>
+            <th>Автор комментария</th>
+            <th>Текст</th>
+            <th>Создано</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</section>
+
+<!-- Сводная таблица управления контентом -->
+<section>
+    <h2>Управление контентом (сводная таблица)</h2>
+    <button id="loadContentSummaryBtn">Загрузить сводную таблицу</button>
+    <table id="contentSummaryTable">
+        <thead>
+        <tr>
+            <th>Заголовок статьи</th>
+            <th>ФИО автора</th>
+            <th>Категория</th>
+            <th>Статус</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</section>
+
+<!-- Сводный отчёт по активности авторов -->
+<section>
+    <h2>Активность авторов (сводный отчёт)</h2>
+    <button id="loadAuthorActivityBtn">Загрузить отчёт</button>
+    <table id="authorActivityTable">
+        <thead>
+        <tr>
+            <th>ФИО автора</th>
+            <th>Опубликованные статьи</th>
+            <th>Всего комментариев</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</section>
+
+<!-- Подключаем JS-логику -->
+<script src="app.js"></script>
+</body>
+</html>
