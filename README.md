@@ -26,7 +26,41 @@
 ### Frontend
 - Интерфейс просмотра данных в таблицах  
 - Фильтры и кнопки обновления  
-- Автоматическая загрузка данных при открытии страницы  
+- Автоматическая загрузка данных при открытии страницы
+
+---
+
+## Веб-приложение
+
+<img width="1919" height="862" alt="image" src="https://github.com/user-attachments/assets/d6d8b13e-4be5-4943-a0f0-9d011e7222b0" />
+
+### Таблицы представления данных
+- Статьи (с возможностью поиска по ID)
+- Комментарии (с возможностью поиска по ID)
+- Управление контентом (сводная таблица)
+- Активность авторов (сводный отчёт)
+
+---
+
+## Swagger UI
+
+<img width="1350" height="879" alt="image" src="https://github.com/user-attachments/assets/3786663e-89cf-4556-8c18-0fec9e701b21" />
+
+### API-эндпоинты
+- GET /authors/ — получение списка всех авторов
+- POST /authors/ — создание нового автора
+
+- GET /categories/ — получение списка всех категорий
+- POST /categories/ — создание новой категории
+
+- GET /articles/ — получение списка всех статей
+- POST /articles/ — создание новой статьи
+
+- GET /comments/ — получение списка всех комментариев
+- POST /comments/ — создание нового комментария
+
+- GET /summary/content-management — получение сводного отчёта по управлению контентом
+- GET /summary/author-activity — получение отчёта по активности авторов
 
 ---
 
@@ -48,20 +82,19 @@ blog-admin/
 │   ├── Dockerfile  
 │   ├── requirements.txt  
 │   └── app/  
-│       ├── main.py  
 │       ├── database.py  
+│       ├── main.py  
 │       ├── models.py  
 │       ├── schemas.py  
-│       ├── seed_data.py  
 │       ├── routers/  
+│       │   ├── articles.py  
 │       │   ├── authors.py  
 │       │   ├── categories.py  
-│       │   ├── articles.py  
 │       │   ├── comments.py  
 │       │   └── summary.py  
 │       └── frontend/  
-│           ├── index.html  
 │           ├── app.js  
+│           ├── index.html  
 │           └── styles.css  
 └── README.md  
 ```
