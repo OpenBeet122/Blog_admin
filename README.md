@@ -41,6 +41,7 @@ DevOps: Docker, Docker Compose
 
 ## Структура проекта
 
+```text
 blog-admin/  
 ├── docker-compose.yml  
 ├── backend/  
@@ -63,19 +64,27 @@ blog-admin/
 │           ├── app.js  
 │           └── styles.css  
 └── README.md  
-
+```
 ---
 
 ## Быстрый запуск
 
 Перейдите в каталог проекта:  
-cd blog-admin  
+```bash
+cd blog-admin
+```
 
-Запустите приложение:  
-docker-compose up --build  
+Запустите приложение:
+```bash
+docker-compose up --build
+```
 
-Приложение будет доступно по адресу:  
-http://localhost:8000/  
+Приложение будет доступно по адресу:
+```text
+http://localhost:8000/
+```
 
-Документация API автоматически доступна по адресу:  
+Документация API автоматически доступна по адресу:
+```text
 http://localhost:8000/docs
+```
